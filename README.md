@@ -1,4 +1,4 @@
-![image](https://github.com/nargesmokhtari/ELEKTRA_Implementation/assets/126694721/1e5f213a-904f-4b77-bf5c-64d9c448ef63)![image](https://github.com/nargesmokhtari/ELEKTRA_Implementation/assets/126694721/25726dce-fbd2-4e69-a3d5-b713068767b6)![image](https://github.com/nargesmokhtari/ELEKTRA_Implementation/assets/126694721/868b77ba-57f9-428e-8fb7-d3918c69453d)# ELEKTRA_Implementation
+FOR PRE PROCESSING PART WE HAVE:
 The provided code defines a function called `electrocardiomatrix` that takes several input parameters: `distance`, `r_peaks`, `filtered_ecg`, `init_window`, and `peaks_window`. 
 
 def electrocardiomatrix(distance, r_peaks, filtered_ecg, init_window, peaks_window):
