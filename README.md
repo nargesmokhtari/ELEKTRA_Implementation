@@ -1,5 +1,5 @@
 FOR PRE PROCESSING PART WE HAVE:
-The provided code defines a function called `electrocardiomatrix` that takes several input parameters: `distance`, `r_peaks`, `filtered_ecg`, `init_window`, and `peaks_window`. 
+# The provided code defines a function called `electrocardiomatrix` that takes several input parameters: `distance`, `r_peaks`, `filtered_ecg`, `init_window`, and `peaks_window`. 
 
 def electrocardiomatrix(distance, r_peaks, filtered_ecg, init_window, peaks_window):
 
