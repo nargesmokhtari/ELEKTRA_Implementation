@@ -55,30 +55,55 @@ Overall, this function takes input parameters related to ECG (electrocardiogram)
 
  `normalize(signal)`:
    - This function takes a signal as input and returns the normalized version of that signal.
+   
    - It defines the range of the normalized signal as [-1, 1] (`a, b = -1, 1`).
+   
    - It calculates the range of the input signal (`c`) by subtracting the minimum value from the maximum value.
+   
    - It then calculates the normalized signal by subtracting the minimum value of the input signal and dividing it by the range.
+   
    - Finally, it scales the normalized signal to the desired range by multiplying it with `c` and adding `a`.
+   
 `process_ecg(unfiltered_ecg, fs)`:
    - This function processes an electrocardiogram (ECG) signal using the Pan-Tompkins algorithm.
+   
    - It takes the unfiltered ECG signal (`unfiltered_ecg`) and the sampling frequency (`fs`) as inputs.
+   
    - It applies several steps of the Pan-Tompkins algorithm to the input signal, including bandpass filtering, differentiation, rectification, and integration.
+   
    - It initializes the algorithm and detects the R-peaks (R-wave peaks) in the ECG signal.
+   
    - It performs various checks and adjustments to identify the definitive R-peaks.
+   
    - It converts the definitive peak values to integer type and applies a correction.
+   
    - Finally, it returns the corrected R-peaks and the filtered signal.
+   
  `peak_distance(r_peaks)`:
+ 
    - This function calculates the mean distance between all peaks (R-peaks) in an ECG signal.
+   
    - It takes the R-peaks as input (`r_peaks`).
+   
    - It iterates over the R-peaks and calculates the distance between each peak and the next one.
+   
    - It skips any distance that exceeds twice the mean distance plus two times the standard deviation.
+   
    - It returns the mean distance between the peaks.
+   
  `save_ecm(norm_ecm, train_filled, test_filled, train_ecms, test_ecms, path_test, path_train, key, i, f, j)`:
+ 
    - This function saves the electrocardiogram (ECG) plot in different paths based on certain conditions.
+   
    - It takes several parameters as input, including `norm_ecm` (normalized ECG signal), `train_filled`, `test_filled` (flags indicating whether the training or test set is already filled), `train_ecms`, `test_ecms` (maximum number of ECG plots for training and testing), `path_test`, `path_train` (paths for saving the test and training ECG plots), `key`, `i`, `f`, `j` (loop variables).
+   
    - It generates a random number between 0 and 1 (`a`).
+   
    - If `a` is less than or equal to 0.2 or the training set is already filled (`train_filled`), it saves the plot in the test set path (`path_test`).
+   
    - If `a` is greater than 0.2 or the test set is already filled (`test_filled`), it saves the plot in the training set path (`path_train`).
+   
    - It increments the counters (`j` and `f`) based on the saved ECG plots and checks if the respective maximum limits (`test_ecms` and `train_ecms`) are reached.
+   
    - Finally, it closes the plot and returns the updated counters (`j` and `f`).
 
