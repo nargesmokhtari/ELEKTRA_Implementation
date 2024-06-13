@@ -1,6 +1,8 @@
 #ELEKTRA: ELEKTRokardiomatrix application to biometric identification with convolutional neural networks
+
 #Author links open overlay panelCaterina Fuster-Barceló, Pedro Peris-Lopez, Carmen Camara
-# FOR PRE PROCESSING PART WE HAVE:
+
+# PRE-PROCESSING:
 The provided code defines a function called `electrocardiomatrix` that takes several input parameters: `distance`, `r_peaks`, `filtered_ecg`, `init_window`, and `peaks_window`. 
 
 def electrocardiomatrix(distance, r_peaks, filtered_ecg, init_window, peaks_window):
